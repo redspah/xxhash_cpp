@@ -42,7 +42,7 @@ You can contact the author at :
 /* Intrinsics
 * Sadly has to be included in the global namespace or literally everything breaks
 */
-#if (defined(__ARM_NEON) && defined(__APPLE__))
+#if (defined(__ARM_NEON))
 #include "sse2neon.h"
 #else
 #include <immintrin.h>
@@ -58,7 +58,7 @@ namespace xxh
 	{
 		constexpr int cpp_version_major = 0;
 		constexpr int cpp_version_minor = 8;
-		constexpr int cpp_version_release = 1;
+		constexpr int cpp_version_release = 3;
 	}
 
 	constexpr uint32_t version_number() 
